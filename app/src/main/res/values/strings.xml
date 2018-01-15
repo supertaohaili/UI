@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">UIDemo</string>
+
+    <string name="menu_ziyuan">菜单</string>
+    <string name="menu_guzhang">菜单</string>
+    <string name="menu_quanyewu">菜单</string>
+    <string name="menu_yunwei">菜单</string>
+    <string name="menu_wangyou">菜单</string>
+    <string name="hint_2g">及格</string>
+    <string name="hint_3g">良好</string>
+    <string name="hint_4g">优秀</string>
+    <string name="hint_linechart_title">生活水平</string>
+
+    <string name="hint_barchart_title">用户数</string>
+    <string name="hint_barchart_msg">单位人数(万)</string>
+    <string name="hint_piechart_title">维护</string>
+    <string name="hint_piechart_name_one">活动工单</string>
+    <string name="hint_piechart_name_two">归档工单数</string>
+    <string name="hint_dijieru">小康小区占比</string>
+    <string name="hint_gaodianhua">温饱小区占比</string>
+    <string name="hint_gaodiaobao">贫困小区占比</string>
+</resources>

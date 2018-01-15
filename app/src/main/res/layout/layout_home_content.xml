@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/match_match"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/match_wrap_mmm_885"
+        android:background="@drawable/bg_rectangle_white_r5"
+        android:orientation="horizontal"
+        android:paddingBottom="18dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="18dp">
+
+        <TextView
+            android:id="@+id/tv_ziyuan"
+            style="@style/tv_menu"
+            android:drawableTop="@drawable/ic_func_myworker"
+            android:text="@string/menu_ziyuan" />
+
+        <TextView
+            android:id="@+id/tv_guzhang"
+            style="@style/tv_menu"
+            android:drawableTop="@drawable/ic_func_myworker"
+            android:text="@string/menu_guzhang" />
+
+        <TextView
+            android:id="@+id/tv_quanyewu"
+            style="@style/tv_menu"
+            android:drawableTop="@drawable/ic_func_myworker"
+            android:text="@string/menu_quanyewu" />
+
+        <TextView
+            android:id="@+id/tv_yunwei"
+            style="@style/tv_menu"
+            android:drawableTop="@drawable/ic_func_myworker"
+            android:text="@string/menu_yunwei" />
+
+        <TextView
+            android:id="@+id/tv_wangyou"
+            style="@style/tv_menu"
+            android:drawableTop="@drawable/ic_func_myworker"
+            android:text="@string/menu_wangyou" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/match_wrap_mmm_885"
+        android:background="@drawable/bg_rectangle_white_s1"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_bule_bold_17"
+                android:text="5128" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:text="@string/hint_2g" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_bule_bold_17"
+                android:text="3477" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:text="@string/hint_3g" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="5dp"
+                android:text="电脑用户数" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_bule_bold_17"
+                android:text="1184" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:text="@string/hint_4g" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/match_wrap_mmm_885"
+        android:background="@drawable/bg_rectangle_white_s1"
+        android:orientation="vertical"
+        android:paddingBottom="18dp">
+
+        <TextView
+            android:id="@+id/lcv_title"
+            style="@style/tv_back_15_top15"
+            android:text="@string/hint_linechart_title" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@id/lcv_title"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@color/theme_color"
+            android:visibility="gone" />
+
+        <www.thl.com.ui.LineChartView
+            android:id="@+id/lcv"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@id/lcv_title" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_rectangle_white_s1"
+        android:paddingBottom="12dp">
+
+        <TextView
+            android:id="@+id/tv_yonghushu"
+            style="@style/yonghushutishi_back_15_top15"
+            android:layout_centerHorizontal="true"
+            android:text="@string/hint_barchart_title" />
+
+        <TextView
+            style="@style/tv_gray_11"
+            android:layout_alignBottom="@id/tv_yonghushu"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/tv_yonghushu"
+            android:text="@string/hint_barchart_msg" />
+
+        <LinearLayout
+            android:id="@+id/llt_tishi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <LinearLayout
+                style="@style/weight_wrap"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="#378bff" />
+
+                <TextView
+                    style="@style/tv_back_12"
+                    android:layout_marginLeft="5dp"
+                    android:text="手机用户数" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/weight_wrap"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="#ff9c1d" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <www.thl.com.ui.BarChartView
+            android:id="@+id/bcv3_yonghushu"
+            style="@style/match_match"
+            android:layout_above="@id/llt_tishi"
+            android:layout_below="@id/tv_yonghushu"
+            android:layout_marginBottom="5dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/match_wrap_mmm_885"
+        android:background="@drawable/bg_rectangle_white_s1"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/tv_back_15_top15"
+            android:text="@string/hint_piechart_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout style="@style/weight_wrap">
+
+                <www.thl.com.ui.RingView
+                    android:id="@+id/ringview_one"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tv_huodonggongdan"
+                    style="@style/tv_back_12"
+                    android:layout_below="@id/ringview_one"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/hint_piechart_name_one" />
+
+                <TextView
+                    android:id="@+id/tv_weichaoshi_one"
+                    style="@style/tv_gray_11"
+                    android:layout_below="@id/tv_huodonggongdan"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="未超时 80%" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignBottom="@id/tv_weichaoshi_one"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@id/tv_weichaoshi_one"
+                    android:background="@drawable/bg_circular_yellow" />
+
+                <TextView
+                    android:id="@+id/tv_chaoshi_one"
+                    style="@style/tv_gray_11"
+                    android:layout_alignLeft="@id/tv_weichaoshi_one"
+                    android:layout_below="@id/tv_weichaoshi_one"
+                    android:text="超时 20%" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignBottom="@id/tv_chaoshi_one"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@id/tv_weichaoshi_one"
+                    android:background="@drawable/bg_circular_light_yellow" />
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/weight_wrap">
+
+                <www.thl.com.ui.RingView
+                    android:id="@+id/ringview_two"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/tv_huodonggongdan1"
+                    style="@style/tv_back_12"
+                    android:layout_below="@id/ringview_two"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/hint_piechart_name_two" />
+
+                <TextView
+                    android:id="@+id/tv_weichaoshi_two"
+                    style="@style/tv_gray_11"
+                    android:layout_below="@id/tv_huodonggongdan1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:text="未超时 80%" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignBottom="@id/tv_weichaoshi_two"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@id/tv_weichaoshi_two"
+                    android:background="@drawable/bg_circular_blue" />
+
+                <TextView
+                    android:id="@+id/tv_chaoshi_two"
+                    style="@style/tv_gray_11"
+                    android:layout_alignLeft="@id/tv_weichaoshi_two"
+                    android:layout_below="@id/tv_weichaoshi_two"
+                    android:text="超时 20%" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_alignBottom="@id/tv_chaoshi_two"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toLeftOf="@id/tv_weichaoshi_two"
+                    android:background="@drawable/bg_circular_light_blue" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/match_wrap_mmm_885"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_rectangle_white_s1"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:paddingTop="22dp">
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_white_15_pindding"
+                android:background="@drawable/bg_gradient_linear_blue_0"
+                android:text="30%" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_dijieru" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_white_15_pindding"
+                android:background="@drawable/bg_gradient_linear_yellow_0"
+                android:text="30%" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_gaodianhua" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/llt_weight_wrap_center_vertical">
+
+            <TextView
+                style="@style/tv_white_15_pindding"
+                android:background="@drawable/bg_gradient_linear_purple_0"
+                android:text="30%" />
+
+            <TextView
+                style="@style/tv_back_12"
+                android:layout_marginTop="5dp"
+                android:text="@string/hint_gaodiaobao" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

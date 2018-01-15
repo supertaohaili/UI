@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#24abff</color>
+    <color name="colorPrimaryDark">#24abff</color>
+    <color name="colorAccent">#24abff</color>
+
+    <color name="theme_color">#24abff</color>
+    <color name="pressed_bgcolor">#22c5eaf8</color>
+</resources>

@@ -1,0 +1,104 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="wrap_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="match_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="match_wrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="weight_wrap">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="match_wrap_mmm_885" parent="match_wrap">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <!--首页菜单栏-->
+    <style name="tv_menu" parent="weight_wrap">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#6e6d8c</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!--蓝色，加粗，17sp-->
+    <style name="tv_bule_bold_17" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#2cb6fe</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--黑色，12sp-->
+    <style name="tv_back_12" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#716e8d</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--白色，12sp-->
+
+    <!--灰色，12sp-->
+    <style name="tv_gray_11" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#bebdcf</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <!--白色，加粗，15sp 内边距3，3，28，28-->
+    <style name="tv_white_15_pindding" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingLeft">28dp</item>
+        <item name="android:paddingRight">28dp</item>
+    </style>
+
+    <!--LinearLayout 水平平分，居中显示，竖直摆放-->
+    <style name="llt_weight_wrap_center_vertical" parent="weight_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!--首页模块标题-->
+    <style name="tv_back_15_top15" parent="match_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#6e6e8a</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <!--用户数-->
+    <style name="yonghushutishi_back_15_top15" parent="wrap_wrap">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#6e6e8a</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+</resources>
