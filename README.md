@@ -1,14 +1,16 @@
-# fingerprint介绍
+# ui介绍
 
-android指纹解锁,支持Android原生6.0及以上+魅族+三星,借鉴github上的写法，代码简单，几个类，库没有导入其他的第三方包，干净整洁。
+提供android 折现图、图形图，扇形图，渐变图等常用报表ui，功能强大，一个报表一个类，代码十分简单，易修改易维护，绘制性能高效，库没有导入其他的第三方包，干净整洁。
+主要是：
+代码简单、代码简单、代码简单，易修改易维护
 
 
 # 效果图
 
- <img src="https://github.com/supertaohaili/fingerprint/blob/master/Screenshot_20180112-102257.png" width="300"><img src="https://github.com/supertaohaili/fingerprint/blob/master/Screenshot_20180112-102323.png" width="300">
+ <img src="https://github.com/supertaohaili/UI/blob/master/TIM图片20180115113215.jpg" width="300">
 
 apk下载链接
-<a href="https://github.com/supertaohaili/fingerprint/blob/master/app-debug.apk">https://github.com/supertaohaili/fingerprint/blob/master/app-debug.apk</a>
+<a href="https://github.com/supertaohaili/UI/blob/master/app-debug.apk">https://github.com/supertaohaili/UI/blob/master/app-debug.apk</a>
 
 # 使用
 ```
@@ -20,80 +22,60 @@ allprojects {
 }
 
 dependencies {
-     compile 'com.github.supertaohaili:fingerprint:1.0.0'
+        compile 'com.github.supertaohaili:UI:1.0.0'
 }
 ```
 
 示例代码:
 ``` java
- mFingerprintIdentify = new FingerprintIdentify(this, null);
-  mFingerprintIdentify.startIdentify(MAX_AVAILABLE_TIMES, new BaseFingerprint.FingerprintIdentifyListener() {
-             @Override
-             public void onSucceed() {
-                 Toast.makeText(MainActivity.this, "解锁成功", Toast.LENGTH_SHORT).show();
-                 tvMsg.setTextColor(Color.parseColor("#ff333333"));
-                 tvMsg.setText("解锁成功");
-             }
 
-             @Override
-             public void onNotMatch(int availableTimes) {
-                 Log.e("Fingerprint", "onNotMatch");
-                 tvMsg.setTextColor(Color.parseColor("#ffff0101"));
-                 tvMsg.setText("密码错了，还可输入" + availableTimes + "次");
-                 translate(ivZhiwen);
-             }
 
-             @Override
-             public void onFailed(boolean isDeviceLocked) {
-                 tvMsg.setTextColor(Color.parseColor("#ffff0101"));
-                 tvMsg.setText("指纹验证太过频繁，请稍后重试或者输入密码登录");
-                 mTimeCount.start();
-                 translate(ivZhiwen);
-             }
+       //扇形
+       mRingViewOne.setProgress(progress);
 
-             @Override
-             public void onStartFailedByDeviceLocked() {
-                 tvMsg.setTextColor(Color.parseColor("#ffff0101"));
-                 tvMsg.setText("指纹验证太过频繁，请稍后重试或者输入密码登录");
-                 mTimeCount.start();
-                 translate(ivZhiwen);
-             }
-         });
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        if (mFingerprintIdentify != null) {
-            mFingerprintIdentify.cancelIdentify();
+       //条形
+        List<String> xnames = new ArrayList<>();
+        xnames.add("1月");
+        xnames.add("2月");
+        xnames.add("3月");
+        xnames.add("4月");
+        xnames.add("5月");
+        xnames.add("6月");
+
+        List<List<Float>> datas = new ArrayList<>();
+
+        List<Float> list = new ArrayList<>();
+        List<Float> list2 = new ArrayList<>();
+        for (int j = 0; j < xnames.size(); ++j) {
+            list.add(Float.valueOf((float) (new Random()).nextInt(5000) / 50.0F));
+            list2.add(Float.valueOf((float) (new Random()).nextInt(5000) / 50.0F));
         }
-    }
+        datas.add(list);
+        datas.add(list2);
+        mBarChartView.initData(datas, xnames);
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (mFingerprintIdentify != null) {
-            mFingerprintIdentify.resumeIdentify();
+
+
+        //折现图
+        String[] series = {"满意", "良好", "一般"};
+        ArrayList datas = new ArrayList();
+        ArrayList xnames = new ArrayList();
+
+        for (int i = 0; i < 12; ++i) {
+            xnames.add((i + 1) + "月");
         }
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mFingerprintIdentify != null) {
-            mFingerprintIdentify.cancelIdentify();
+        for (int i = 0; i < series.length; ++i) {
+            ArrayList tmpList = new ArrayList();
+            for (int j = 0; j < xnames.size(); ++j) {
+                tmpList.add(Float.valueOf((float) (new Random()).nextInt(10000) / 50.0F));
+            }
+            datas.add(tmpList);
         }
-    }
-
+        mLineChartView.initData(series, datas, xnames);
 ```
 
-混淆文件
-```java
-# MeiZuFingerprint
--keep class com.fingerprints.service.** { *; }
 
-# SmsungFingerprint
--keep class com.samsung.android.sdk.** { *; }
-```
 
 ### Known Issues
 If you have any questions/queries/Bugs/Hugs please mail @

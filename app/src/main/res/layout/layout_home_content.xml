@@ -73,11 +73,7 @@
                 style="@style/tv_back_12"
                 android:text="@string/hint_3g" />
 
-            <TextView
-                style="@style/tv_back_12"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="5dp"
-                android:text="电脑用户数" />
+
         </LinearLayout>
 
         <LinearLayout style="@style/llt_weight_wrap_center_vertical">
@@ -165,6 +161,8 @@
                     style="@style/tv_back_12"
                     android:layout_marginLeft="5dp"
                     android:text="手机用户数" />
+
+
             </LinearLayout>
 
             <LinearLayout
@@ -177,6 +175,10 @@
                     android:layout_height="8dp"
                     android:background="#ff9c1d" />
 
+                <TextView
+                    style="@style/tv_back_12"
+                    android:layout_marginLeft="5dp"
+                    android:text="电脑用户数" />
             </LinearLayout>
         </LinearLayout>
 
